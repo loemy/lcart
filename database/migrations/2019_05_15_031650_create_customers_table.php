@@ -24,8 +24,8 @@ class CreateCustomersTable extends Migration
 			$table->bigInteger('payment_method_id')->unsigned();
 			$table->bigInteger('address_id')->unsigned();
 			$table->string('name');
-			$table->string('firstname', 30)->nullable();
-			$table->string('lastname', 30)->nullable();
+			$table->string('first_name', 30)->nullable();
+			$table->string('last_name', 30)->nullable();
 			$table->string('email')->unique();
 			$table->string('password');
 			$table->rememberToken('rememberToken');
@@ -81,7 +81,8 @@ class CreateCustomersTable extends Migration
 			$table->tinyInteger('group_discount');
 			$table->text('description');
 			$table->boolean('approval');
-			$table->integer('position');
+            $table->integer('position');
+            $table->tinyInteger('status')->default('1');
 			//from setting
 			$table->tinyInteger('company_id_display')->default(0);
 			$table->tinyInteger('company_id_required')->default(0);
@@ -145,7 +146,7 @@ class CreateCustomersTable extends Migration
 
 
 
-		
+
 
     }
 

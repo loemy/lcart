@@ -1,44 +1,45 @@
 @extends('admin.layouts.master')
 
 @section('title')
- @Lang('Customer Group Management')
+ @lang('Customer Group Management')
 @endsection
 
 @section('page-header')
-<h1>@Lang('Customer Group Management')</h1>
-    
+<h1>@lang('Customer Group Management')</h1>
+
 @endsection
 @section('content')
  <div class="row">
      <div class="col-sm-12">
        <div class="box box-pink">
        <div class="box-header">
-          <div class="box-title"> @Lang('Customer Group')</div>
+          <div class="box-title"> @lang('Customer Group')</div>
           @role('Admin')
                 <div class="pull-right box-tools">
                 @permission('all')
                 <button href="{!! url('admin.customergroup.create')  !!}" type="button" class="btn btn-circle btn-info" data-toggle="tooltip" title="Add" data-placement="left" >
 				        <span><i class="fa fa-plus"></i></span>
 				        </button>
-                <button href="{!! url('admin.customergroup.destroy')  !!}" type="button" class="btn btn-circle btn-pink" ><span><i class="fa fa-trash"></i></span></button>  	
-                @endCustomer Group  
+                <button href="{!! url('admin.customergroup.destroy')  !!}" type="button" class="btn btn-circle btn-pink" ><span><i class="fa fa-trash"></i></span></button>
+                @endCustomer Group
                </div>
-          @endpermission      
+          @endpermission
        </div><!--box-header-->
        <div class="box-body">
              <table id="Customergroup" class="table table-bordered">
                     <thead>
                        <tr>
 				        <th class="text-left"><input type="checkbox" onclick="$('input[name*=\'selected\']').attr('checked',this.checked);" /></th>
-                         <th >{{__('name')}}</th>
+                         <th >{{__('Name')}}</th>
                          <th >{{__('Group Type')}}</th>
-                         <th >{{__('Required Approved')}}</th>
-				                 <th ></th>   
+                         <th >{{__('Position')}}</th>
+                         <th >{{__('Status')}}</th>
+				         <th ></th>
                        </tr>
                      </thead>
                      <tbody>
-                        
-                     </tbody>   
+
+                     </tbody>
             </table>
 
 
@@ -46,7 +47,7 @@
        </div><!--box-pink-->
 
      </div><!--col-->
- </div><!--row-->   
+ </div><!--row-->
 @endsection
 @section('script')
 <script type="text/javascript">
@@ -57,7 +58,7 @@ $(function(){
     language: {
     paginate: {
       next: '<i class="fa fa-chevron-right">',
-      previous: '<i class="fa fa-chevron-left">'  
+      previous: '<i class="fa fa-chevron-left">'
     }
   },
     ajax:'{!! route('admin.Customer Group.data') !!}',
@@ -69,8 +70,8 @@ $(function(){
 	   {data: 'status',   name:'status'},
 	   {data: 'action',   name:'action', orderable:false, searchable:false},
     ]
-   
+
     });
 });
-</script>    
+</script>
 @endsection

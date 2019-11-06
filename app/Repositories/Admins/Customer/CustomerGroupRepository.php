@@ -20,7 +20,13 @@ class CustomerGroupRepository extends EloquentRepository implements CustomerGrou
 
     public function getForDataTable($status = 1, $trashed = false) {
 
-       return CustomerGroup::select([])
+        if($trashed = "true"){
+            return CustomerGroup::onlyTrashed()
+                                ->select(['name', 'group_type','position','status'])
+                                ->get();
+        }
+
+        return CustomerGroup::select(['name', 'group_type','position','status'])
                              ->where('status', $status)
                              ->get();
     }
