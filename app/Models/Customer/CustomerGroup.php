@@ -43,4 +43,16 @@ class CustomerGroup extends Model
     protected $casts = [
         'status' => 'integer',
     ];
+
+    public function getCustomerGroupLists($empty = false)
+    {
+        $model = new static();
+        if(true === $empty)
+        {
+            $return = Collection::make(['' => __('Please Select')] + $model->orderBy('name', 'asc')->pluck('name', 'id')->toArray());
+        } else {
+            $return = $model->all()->pluck('name', 'id');
+        }
+        return $return;
+    }
 }

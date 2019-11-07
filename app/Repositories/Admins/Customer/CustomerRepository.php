@@ -6,7 +6,7 @@ use App\Models\Customer\Customer;
 use App\Contract\Admins\Customer\CustomerContract;
 use Recca0120\Repository\EloquentRepository;
 
-class CustomerGroupRepository extends EloquentRepository implements CustomerContract
+class CustomerRepository extends EloquentRepository implements CustomerContract
 {
     public function __construct(Customer $model)
     {
