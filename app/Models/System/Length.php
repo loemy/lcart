@@ -40,4 +40,9 @@ class Length extends Model
      * @var array
      */
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
+
+
+    public function scopeDefault($query) {
+       return $query->where('is_default', 1);
+    }
 }
