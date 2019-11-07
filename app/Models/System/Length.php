@@ -2,13 +2,14 @@
 
 namespace App\Models\System;
 
+use App\Models\System\Attribute\LengthAttribute;
 use App\Models\System\Relationship\LengthRelationship;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Length extends Model
 {
-    use LengthRelationship, SoftDeletes;
+    use LengthRelationship, SoftDeletes, LengthAttribute;
 
     /**
      * The table associated with the model.
