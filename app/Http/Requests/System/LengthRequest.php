@@ -4,7 +4,7 @@ namespace App\Http\Requests\System;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LenghtRequest extends FormRequest
+class LengthRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -32,9 +32,9 @@ class LenghtRequest extends FormRequest
             case 'PUT':
             case 'PATCH': {
                 return [
-                    'name'  => 'required|string|max:255',
-                    'alpha2'   => 'required|string|size:2',
-                    'phone' => 'required|string|max:20',
+                    'title'  => 'required',
+                    'unit'   => 'required',
+                    'value' => 'required|numeric',
                 ];
             }
             default:
@@ -46,9 +46,9 @@ class LenghtRequest extends FormRequest
     {
         return[
 
-               'iso_code_2.required'   => __('Country Iso Code 2  Required '),
-			   'iso_code_3.required'   => __('Country Iso Code 3  Required '),
-			   'name.required'         => __('Country Name Required ')
+               'title'                 => __('Length Title Required '),
+			   'unit'                  => __('Length Unit  Required '),
+			   'value'                 => __('Length value Required ')
 
                ];
     }

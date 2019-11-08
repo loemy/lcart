@@ -13,7 +13,7 @@ trait LengthAttribute
      * radio check show this this current default
      */
 
-    public function getDefaultAttribute() {
+    public function getDefaultLabelAttribute() {
 
         if($this->isDefault()){
             return "<label class='badge badge-success'>".__('default' ).'</label>';
