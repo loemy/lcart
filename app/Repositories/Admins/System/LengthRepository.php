@@ -104,4 +104,24 @@ class LengthRepository extends EloquentRepository implements LengthContract
         }
         throw new GeneralException(__('length::exceptions.admin.lengths.restore_error'));
     }
+
+    public function setDefault(Length $length) :Length
+    {
+       if($length->default ==1)
+       {
+           throw new GeneralException(__('length::exceptions.admin.lengths.already_default'));
+       }
+       if($default_length = $this->getByColumn(1, 'is_default')){
+           $default_length -> default = 0;
+           $default_length->save();
+       }
+
+       $length->default = 1;
+       if($length->save()){
+           event(new LengthSetDefault($length));
+           return $length;
+       }
+
+       throw new GeneralException(__('length::exceptions.admin.length.default_error'));
+    }
 }
