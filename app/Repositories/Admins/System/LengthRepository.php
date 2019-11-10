@@ -68,7 +68,7 @@ class LengthRepository extends EloquentRepository implements LengthContract
 
     public function delete(Length $length) :Length
     {
-       if($length->deleted()){
+       if($length->delete()){
            event(new LengthDelete($length));
 
            return $length;

@@ -56,6 +56,7 @@
         "spatie/laravel-analytics": "^3.8",
         "stackkit/laravel-database-emails": "^4.1",
         "staudenmeir/eloquent-has-many-deep": "^1.11",
+        "staudenmeir/laravel-adjacency-list": "^1.2",
         "symfony/psr-http-message-bridge": "^1.2",
         "yajra/laravel-datatables-oracle": "^9.7",
         "zanysoft/laravel-zip": "^1.0"
