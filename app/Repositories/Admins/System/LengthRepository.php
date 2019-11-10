@@ -64,6 +64,8 @@ class LengthRepository extends EloquentRepository implements LengthContract
         });
     }
 
+    /** */
+
     public function delete(Length $length) :Length
     {
        if($length->deleted()){
@@ -73,6 +75,8 @@ class LengthRepository extends EloquentRepository implements LengthContract
        }
        throw new GeneralException(__('length::exceptions.admin.lengths.delete_error'));
     }
+
+    /** */
 
     public function forceDelete(Length $length) :Length
     {
@@ -90,6 +94,8 @@ class LengthRepository extends EloquentRepository implements LengthContract
          throw new GeneralException(__('length::exceptions.admin.length.delete_error'));
     }
 
+    /** */
+
     public function restore(Length $length): Length
     {
         if(is_null($length->deleted_at))
@@ -104,6 +110,8 @@ class LengthRepository extends EloquentRepository implements LengthContract
         }
         throw new GeneralException(__('length::exceptions.admin.lengths.restore_error'));
     }
+
+    /** */
 
     public function setDefault(Length $length) :Length
     {
