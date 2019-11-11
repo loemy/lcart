@@ -20,10 +20,12 @@ class WeightsTableSeeder extends Seeder
         $this->disableForeignKeys();
         $this->truncate('weights');
         $weight = [
-            ['name' => __('Can View'), 'slug' => 'view.', 'description' =>__('Can View'), 'model'=>'Permission','created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
-            ['name' => __('Can Create'), 'slug' => 'create.', 'description' =>__('Can Create New'), 'model'=>'Permission','created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
-            ['name' => __('Can Edit'), 'slug' => 'edit.', 'description' =>__('Can Edit'), 'model'=>'Permission','created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
-            ['name' => __('Can Delete'), 'slug' => 'delete.', 'description' =>__('Can Delete'), 'model'=>'Permission','created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
+            ['title' => __('Kilogram'), 'unit' => 'kg', 'value' =>'1.00000000', 'is_default'=>1,'created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
+            ['title' => __('Gram'), 'unit' => 'g', 'value' =>'1000.00000000', 'is_default'=>0,'created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
+            ['title' => __('Pound'), 'unit' => 'lb', 'value' =>'2.205', 'is_default'=>0,'created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
+            ['title' => __('Ounces'), 'unit' => 'oz', 'value' =>'35.27396', 'is_default'=>0,'created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
+            ['title' => __('Stones'), 'unit' => 'st', 'value' =>'0.15747', 'is_default'=>0,'created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
+            ['title' => __('Tonnes'), 'unit' => 't', 'value' =>'0.001', 'is_default'=>0,'created_at' => Carbon::now(),'update_at' => Carbon::now(), 'deleted_at' =>null,],
 
 
 
