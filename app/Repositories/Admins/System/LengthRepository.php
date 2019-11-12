@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Admin\System;
+namespace App\Repositories\Admins\System;
 
 use App\Models\System\Length;
 use App\Contract\Admins\System\LengthContract;

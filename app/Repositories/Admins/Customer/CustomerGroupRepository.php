@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Admin\Customer;
+namespace App\Repositories\Admins\Customer;
 
 use App\Models\Customer\CustomerGroup;
 use App\Contract\Admins\Customer\CustomerGroupContract;
