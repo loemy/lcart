@@ -10,6 +10,9 @@ use Yajra\DataTables\Facades\DataTables;
 class LengthTableController extends Controller
 {
     protected $lengths;
+    /**
+     * @param LengthRepository $lengths
+     */
 
     public function __construct(LengthRepository $lengths)
     {
@@ -17,6 +20,9 @@ class LengthTableController extends Controller
 
     }
 
+    /**
+     * 
+     */
     public function __invoke(LengthRequest $request)
     {
            return DataTables::of($this->lengths->getForDataTable($request->get('trashed')))
@@ -24,7 +30,7 @@ class LengthTableController extends Controller
                            ->addColumn('action', function($length){
                                return $length->action_buttons;
                            })
-                           ->sffColumn('default', function ($length) {
+                           ->addColumn('default', function ($length) {
                                return $length->default_label;
                            })
                            ->make(true);
