@@ -40,8 +40,12 @@ class CreateAddressesTable extends Migration
 			$table->string('iso_code_2', 2);
 			$table->string('iso_code_3', 3);
 			$table->tinyInteger('status')->default('1');
-			$table->string('calling_code', 3)->nullable();
+            $table->string('calling_code', 3)->nullable();
+            $table->string('country_code', 3)->default('');
             $table->string('name');
+            $table->string('full_name', 255)->nullable();
+            $table->string('region_code', 3)->default('');
+            $table->string('sub_region_code', 3)->default('');
 
         });
 
