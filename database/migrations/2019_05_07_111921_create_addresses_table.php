@@ -56,7 +56,7 @@ class CreateAddressesTable extends Migration
 			$table->bigInteger('country_id')->unsigned();
 			$table->string('code', 32);
 			$table->string('name');
-            $table->tinyInteger('status')->default('0');
+            $table->tinyInteger('status')->default('1');
 
         });
 
