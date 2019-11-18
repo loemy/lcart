@@ -132,7 +132,6 @@ class CountriesTableSeeder extends Seeder
                 "name"=>"Azerbaijan",
                 "region_code"=>"142",
                 "sub_region_code"=>"145",
-
                 "calling_code"=>"994",
                 "status" =>1,
                 "created_at" => Carbon::now(),"update_at" => Carbon::now(),
@@ -145,7 +144,6 @@ class CountriesTableSeeder extends Seeder
                 "name"=>"Argentina",
                 "region_code"=>"019",
                 "sub_region_code"=>"005",
-
                 "calling_code"=>"54",
                 "status" =>1,
                 "created_at" => Carbon::now(),"update_at" => Carbon::now(),
@@ -158,7 +156,6 @@ class CountriesTableSeeder extends Seeder
                 "name"=>"Australia",
                 "region_code"=>"009",
                 "sub_region_code"=>"053",
-
                 "calling_code"=>"61",
                 "status" =>1,
                 "created_at" => Carbon::now(),"update_at" => Carbon::now(),
@@ -171,7 +168,6 @@ class CountriesTableSeeder extends Seeder
                 "name"=>"Austria",
                 "region_code"=>"150",
                 "sub_region_code"=>"155",
-
                 "calling_code"=>"43",
                 "status" =>1,
                 "created_at" => Carbon::now(),"update_at" => Carbon::now(),
@@ -184,7 +180,6 @@ class CountriesTableSeeder extends Seeder
                 "name"=>"Bahamas",
                 "region_code"=>"019",
                 "sub_region_code"=>"029",
-
                 "calling_code"=>"1",
                 "status" =>1,
                 "created_at" => Carbon::now(),"update_at" => Carbon::now(),
@@ -221,7 +216,6 @@ class CountriesTableSeeder extends Seeder
                 "name"=>"Armenia",
                 "region_code"=>"142",
                 "sub_region_code"=>"145",
-
                 "calling_code"=>"374",
                 "status" =>1,
                 "created_at" => Carbon::now(),"update_at" => Carbon::now(),
@@ -246,7 +240,6 @@ class CountriesTableSeeder extends Seeder
                 "name"=>"Belgium",
                 "region_code"=>"150",
                 "sub_region_code"=>"155",
-
                 "calling_code"=>"32",
                 "status" =>1,
                 "created_at" => Carbon::now(),"update_at" => Carbon::now(),
