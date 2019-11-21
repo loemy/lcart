@@ -28,8 +28,7 @@ class CreateAddressesTable extends Migration
 			$table->string('postcode', 10);
 			$table->string('telephone', 32);
 			$table->string('fax', 32);
-			$table->string('latitude', 32);
-            $table->string('longitude', 32);
+
 
 
         });
@@ -46,6 +45,8 @@ class CreateAddressesTable extends Migration
             $table->string('full_name', 255)->nullable();
             $table->string('region_code', 3)->default('');
             $table->string('sub_region_code', 3)->default('');
+            $table->string('latitude', 32);
+            $table->string('longitude', 32);
 
         });
 
